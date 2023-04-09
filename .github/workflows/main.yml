@@ -22,7 +22,12 @@ jobs:
     steps:
     
     - name : print secret1
-      run : echo ${{ secrets.SEC1 }}
+      run : |
+        if [ "${{ secrets.SEC1 }}" == "${{ secrets.SEC2 }}" ]; then
+          echo "good"
+        else
+          echo "bad"
+        fi
       
     - name : change env
       run : |
