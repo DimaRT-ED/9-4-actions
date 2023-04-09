@@ -28,9 +28,13 @@ jobs:
     
     - name: print good by
       run : echo "app name is ${{ env.My_APP_NAME }}"
+      
+    - name : check python version
+      run: python3 --version
         
   my_job2:
     runs-on: ubuntu-latest
+    needs: [my_job1]
     
     steps:
     
@@ -38,8 +42,11 @@ jobs:
       run: echo "HELLO FROM JOB 2"
       
     - name: first step job2
-      run: echo " $LOCAL_VAR "
-      env: 
+      run : echo " $LOCAL_VAR "
+      env : 
         LOCAL_VAR: "LOCAL_VALUE"
+        
+    - name: check aws version
+      run : aws --version
       
     
