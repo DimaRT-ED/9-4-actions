@@ -23,7 +23,7 @@ jobs:
     
     
     - name : change env
-      run : ${{ env.RELISE_NAME }} = "NEW"
+      run : RELISE_NAME = "NEW"
      
     - name: Print env 
       run: echo "env value is ${{ env.RELISE_NAME }}"
