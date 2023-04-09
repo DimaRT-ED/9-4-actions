@@ -3,6 +3,7 @@
 #---------------------------------------------
 
 name: SImple_Pipeline
+
 env: 
   My_APP_NAME : "My_first_app"
   
@@ -26,7 +27,7 @@ jobs:
       run : ls -la
     
     - name: print good by
-      run : echo "app name is: ${{ env.My_APP_NAME }}"
+      run : echo "app name is ${{ env.My_APP_NAME }}"
         
   my_job2:
     runs-on: ubuntu-latest
@@ -35,5 +36,10 @@ jobs:
     
     - name: first step job2
       run: echo "HELLO FROM JOB 2"
+      
+    - name: first step job2
+      run: echo " $LOCAL_VAR "
+      env: 
+        LOCAL_VAR: "LOCAL_VALUE"
       
     
