@@ -26,7 +26,13 @@ jobs:
       
     - name: run ls -la 
       run : ls -la
-    
+      
+    - name: Git clone 
+      uses: actions/checkout@v1
+      
+    - name: run ls -la 
+      run : ls -la
+      
     - name: print good by
       run : echo "app name is ${{ env.My_APP_NAME }}"
       
