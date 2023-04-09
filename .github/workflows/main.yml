@@ -23,7 +23,7 @@ jobs:
     
     
     - name : change env
-      run : 
+      run : |
         export RELISE_NAME="NEW"
         echo $RELISE_NAME
        
