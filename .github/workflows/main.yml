@@ -21,7 +21,9 @@ jobs:
     
     steps:
     
-    
+    - name : print secret1
+      run : echo ${{ secrets.SEC1 }}
+      
     - name : change env
       run : |
         export RELISE_NAME="NEW"
