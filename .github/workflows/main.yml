@@ -4,7 +4,9 @@
 
 name: SImple_Pipeline
 env: 
-  APP_NAME : "My_first_app"
+  My_APP_NAME : "My_first_app"
+  
+  
 on: 
   push:
     branches: 
@@ -20,11 +22,11 @@ jobs:
     - name: Print hello world 
       run: echo "HELLO WORLD !!!"
       
-    - name: run ls -la & print good by
-      run : |
-        ls -la
-        echo  S{{ env.APP_NAME }}
-        
+    - name: run ls -la 
+      run : ls -la
+    
+    - name: print good by
+      run : echo "app name is: ${{ env.My_APP_NAME }}"
         
   my_job2:
     runs-on: ubuntu-latest
