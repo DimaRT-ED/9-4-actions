@@ -23,7 +23,7 @@ jobs:
     
     - name : print secret1
       run : |
-        if [ "${{ secrets.SEC1 }}" == "${{ secrets.SEC2 }}" ]; then
+        if [ "${{ secrets.SEC1 }}" == "${{ secrets.SEC3 }}" ]; then
           echo "good"
         else
           echo "bad"
