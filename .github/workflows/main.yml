@@ -6,6 +6,7 @@ name: SImple_Pipeline
 
 env: 
   My_APP_NAME : "My_first_app"
+  RELISE_NAME : "My_first_app-${{ github.sha }}"
   
   
 on: 
@@ -47,6 +48,6 @@ jobs:
         LOCAL_VAR: "LOCAL_VALUE"
         
     - name: check aws version
-      run : aws --version
+      run : echo "Relise name ${{ env.RELISE_NAME }}"
       
     
