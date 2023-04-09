@@ -21,6 +21,13 @@ jobs:
     
     steps:
     
+    
+    - name : change env
+      run : ${{ env.RELISE_NAME }} = "NEW"
+     
+    - name: Print env 
+      run: echo "env value is ${{ env.RELISE_NAME }}"
+      
     - name: Print hello world 
       run: echo "HELLO WORLD !!!"
       
@@ -58,5 +65,9 @@ jobs:
         
     - name: check aws version
       run : echo "Relise name ${{ env.RELISE_NAME }}"
+      
+    - name: Print env 
+      run: echo "env value is ${{ env.RELISE_NAME }}"
+      
       
     
