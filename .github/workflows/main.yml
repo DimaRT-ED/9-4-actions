@@ -23,7 +23,7 @@ jobs:
     - name: run ls -la & print good by
       run : |
         ls -la
-        echo "application name S{{ env.APP_NAME }}"
+        echo 'application name S{{ env.APP_NAME }}'
         
         
   my_job2:
