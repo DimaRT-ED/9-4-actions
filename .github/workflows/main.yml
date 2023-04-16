@@ -2,7 +2,7 @@
 # First  simple git action
 #---------------------------------------------
 
-name: SImple_Pipeline
+name: SImple_Pipelineee
 
 env: 
   My_APP_NAME : "My_first_app"
