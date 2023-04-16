@@ -24,9 +24,9 @@ jobs:
     - name : print secret1
       run : |
         if [ "${{ secrets.SEC1 }}" == "${{ secrets.SEC3 }}" ]; then
-          ech "good"
+          echo "good"
         else
-          echo "bad"
+          ech "bad"
         fi
       
     - name : change env
